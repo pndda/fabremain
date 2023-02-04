@@ -1,0 +1,17 @@
+{
+  "name": "acf/block-flex",
+  "title": "Block Flex",
+  "description": "A block that renders content in columns",
+  "category": "custom-blocks",
+  "icon": "columns",
+  "supports": {
+    "align": false,
+    "mode": false,
+    "customClassName": false,
+    "anchor": true
+  },
+  "acf": {
+    "mode": "edit",
+    "renderTemplate": "block-flex.php"
+  }
+}

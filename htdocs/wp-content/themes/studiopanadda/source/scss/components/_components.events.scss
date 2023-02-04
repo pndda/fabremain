@@ -1,0 +1,27 @@
+.c-events {
+  article {
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+
+    p {
+      margin-bottom: .4rem;
+      @include rfs(17px);
+    }
+
+    figcaption {
+      @include rfs(14px);
+    }
+  }
+}
+
+.c-events__side {
+  padding: 2rem;
+
+  .h4 {
+    line-height: 1.2;
+    font-weight: 500;
+  }
+}

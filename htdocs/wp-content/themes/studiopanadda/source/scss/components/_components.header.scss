@@ -1,0 +1,20 @@
+.c-header {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  font-weight: $font-weight-bold;
+  transition: transform .3s ease-in-out;
+  z-index: 900;
+}
+
+
+@keyframes headerDown {
+  from {
+    transform: translateX(0) translateY(-100%);
+  }
+
+  to {
+    transform: translateX(0) translateY(0);
+  }
+}

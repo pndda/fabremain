@@ -1,0 +1,24 @@
+.c-pagination {
+  .page-numbers {
+    display: inline-block;
+    font-size: 18px;
+    padding: .5rem .8rem;
+    color: $primary;
+    background: $white;
+
+    &.current {
+      position: relative;
+      color: $white;
+      background: $primary;
+    }
+  }
+
+  a {
+    text-decoration: none;
+
+    &:hover {
+      background: $primary;
+      color: $white;
+    }
+  }
+}

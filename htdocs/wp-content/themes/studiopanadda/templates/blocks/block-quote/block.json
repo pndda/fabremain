@@ -1,0 +1,17 @@
+{
+  "name": "acf/block-quote",
+  "title": "Block Quote",
+  "description": "The default quote block.",
+  "category": "custom-blocks",
+  "icon": "format-quote",
+  "supports": {
+    "align": false,
+    "mode": false,
+    "customClassName": false,
+    "anchor": true
+  },
+  "acf": {
+    "mode": "edit",
+    "renderTemplate": "block-quote.php"
+  }
+}

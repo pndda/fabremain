@@ -1,0 +1,133 @@
+/*
+ * Page Settings
+ * Global page settings
+ */
+
+html {
+  min-height: 100%; /* [1] */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background: $black;
+  color: $white;
+}
+
+main {
+  position: relative;
+  z-index: 800;
+  flex-grow: 1;
+  transition: transform .3s ease-in-out;
+
+  p {
+    font-size: 1.25rem;
+  }
+}
+
+figure {
+  margin: 0;
+}
+
+.bg-black {
+  background-color: $black;
+}
+
+.bg-purple {
+  background-color: $purple;
+}
+
+.b-highlight__wrapper {
+  @include media-breakpoint-up(md) {
+    display: grid;
+    row-gap: 20px;
+    column-gap: 20px;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .item {
+    border: 1px solid $white;
+    margin: 1rem 0;
+    @include media-breakpoint-up(md) {
+      margin: 0;
+    }
+
+    &:hover {
+      figure::after {
+        opacity: .4;
+        transition: .2s ease-in;
+      }
+    }
+  }
+
+  .item-large {
+    @include media-breakpoint-up(md) {
+      grid-column: span 1;
+      grid-row: span 2;
+      background: #fc0;
+    }
+  }
+
+  .item-stack {
+    @include media-breakpoint-up(md) {
+      grid-column: span 1;
+      grid-row: span 1;
+      background: #faaca8;
+    }
+  }
+
+  .item-medium {
+    @include media-breakpoint-up(md) {
+      grid-column: span 1;
+      grid-row: span 1;
+      background: #3a2c4d;
+    }
+  }
+
+  figure {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, .6);
+      opacity: 1;
+      transition: .2s ease-in;
+      top: 0;
+      left: 0;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: relative;
+    }
+
+    .text {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding: 1rem 1.3rem;
+      z-index: 10;
+    }
+
+    @include media-breakpoint-up(lg) {
+      .text {
+        padding: 3.125rem 4.375rem;
+      }
+    }
+  }
+}
+

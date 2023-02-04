@@ -1,0 +1,17 @@
+{
+  "name": "acf/block-editor",
+  "title": "Block Editor",
+  "description": "The default editor block.",
+  "category": "custom-blocks",
+  "icon": "edit",
+  "supports": {
+    "align": false,
+    "mode": false,
+    "customClassName": false,
+    "anchor": true
+  },
+  "acf": {
+    "mode": "edit",
+    "renderTemplate": "block-editor.php"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "acf/block-highlight",
+  "title": "Block Highlight",
+  "description": "A highlight block.",
+  "category": "custom-blocks",
+  "icon": "align-full-width",
+  "supports": {
+    "align": false,
+    "mode": false,
+    "customClassName": false,
+    "anchor": true
+  },
+  "acf": {
+    "mode": "edit",
+    "renderTemplate": "block-highlight.php"
+  }
+}

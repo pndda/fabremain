@@ -1,0 +1,46 @@
+.c-filter__options .searchandfilter {
+  ul {
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    @include media-breakpoint-up(xl) {
+      justify-content: center;
+    }
+  }
+
+  li {
+    padding: 0;
+
+    /*   > ul > li {
+         padding: 0;
+         margin: 1rem 1rem 1rem  0 !important
+       } */
+  }
+
+  /*  @include media-breakpoint-up(xl) {
+      li {
+        margin: 0 1rem 0 0 !important;
+
+        > ul > li {
+          padding: 0;
+          margin: 0 1rem 0 1rem !important;
+
+          &:nth-child(2) {
+            margin: 0 !important;
+          }
+        }
+      }
+    } */
+
+  select.sf-input-select {
+    height: 30px;
+    margin: .5rem 1rem;
+    min-width: 155px;
+  }
+
+  input {
+    height: 30px;
+    margin: .5rem 1rem;
+  }
+}

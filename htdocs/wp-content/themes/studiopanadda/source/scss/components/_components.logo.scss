@@ -1,0 +1,15 @@
+.c-logo {
+  display: block;
+
+  img {
+    width: auto;
+    height: 45px;
+    object-fit: contain;
+  }
+
+  @include media-breakpoint-up(md) {
+    img {
+      height: 70px;
+    }
+  }
+}

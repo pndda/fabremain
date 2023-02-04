@@ -1,0 +1,17 @@
+{
+  "name": "acf/block-image",
+  "title": "Block Image",
+  "description": "The default image block.",
+  "category": "custom-blocks",
+  "icon": "format-image",
+  "supports": {
+    "align": false,
+    "mode": false,
+    "customClassName": false,
+    "anchor": true
+  },
+  "acf": {
+    "mode": "edit",
+    "renderTemplate": "block-image.php"
+  }
+}

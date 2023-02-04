@@ -1,0 +1,25 @@
+/*
+ * Components: Buttons
+ * Custom buttons styling
+ */
+.btn {
+  padding: .75rem 1.5rem;
+  font-size: 1.1rem;
+  line-height: 1;
+  border-radius: 0;
+}
+
+.btn-link {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.btn-primary {
+  color: $white;
+
+  &:hover {
+    background-color: $black;
+    color: $white;
+    padding: .75rem 1.5rem;
+  }
+}

@@ -1,0 +1,129 @@
+.b-slider {
+  background: $purple;
+  overflow-x: clip;
+}
+
+.b-slider__slider-wrapper {
+  position: relative;
+  @include media-breakpoint-up(md) {
+    &::after {
+      content: '';
+      position: absolute;
+      background: $black;
+      width: 200vw;
+      height: 3rem;
+      left: -50%;
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    &::after {
+      height: 4.5rem;
+    }
+  }
+}
+
+.b-slider__button {
+  position: absolute;
+  top: 100%;
+  padding: 7px 10px;
+  background: #e5d8e5;
+  border: 0;
+  opacity: 1;
+  box-shadow: none;
+  z-index: 10;
+  transition: .2s ease opacity;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  svg {
+    color: $white;
+    width: 20px;
+    height: 20px;
+  }
+
+  &:hover, &:focus {
+    background: $primary;
+  }
+
+  @include media-breakpoint-up(md) {
+    top: 100%;
+  }
+}
+
+.b-slider__button--prev {
+  left: calc(50% - 40px);
+  transform: translateY(-50%) scale(-1);
+
+  .b-slider & {
+    @include media-breakpoint-up(md) {
+      left: 0;
+    }
+  }
+}
+
+.b-slider__button--next {
+  right: calc(50% - 40px);
+  transform: translateY(-50%);
+
+  .b-slider & {
+    @include media-breakpoint-up(md) {
+      right: unset;
+      left: 40px;
+    }
+  }
+}
+
+.c-slide {
+  .title {
+    padding-left: 1.5rem;
+    position: relative;
+    font-size: 1.25rem;
+    font-weight: 600;
+    font-style: italic;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 15px;
+      height: 1px;
+      background: $white;
+      left: 0;
+      top: 50%;
+    }
+  }
+
+  .slick-slide {
+    @include media-breakpoint-up(lg) {
+      height: 460px;
+    }
+
+    figure {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        max-height: 400px;
+      }
+
+      @include media-breakpoint-up(md) {
+        img {
+          max-height: 200px;
+        }
+      }
+      @include media-breakpoint-up(lg) {
+        img {
+          max-height: 100%;
+        }
+      }
+    }
+  }
+}
+

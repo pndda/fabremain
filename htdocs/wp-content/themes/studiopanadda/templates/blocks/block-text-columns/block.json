@@ -1,0 +1,17 @@
+{
+  "name": "acf/block-text-columns",
+  "title": "Block Text Column",
+  "description": "The text column block.",
+  "category": "custom-blocks",
+  "icon": "columns",
+  "supports": {
+    "align": false,
+    "mode": false,
+    "customClassName": false,
+    "anchor": true
+  },
+  "acf": {
+    "mode": "edit",
+    "renderTemplate": "block-text-columns.php"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "acf/block-forms",
+  "title": "Block Forms",
+  "description": "A default forms block.",
+  "category": "custom-blocks",
+  "icon": "forms",
+  "supports": {
+    "align": false,
+    "mode": false,
+    "customClassName": false,
+    "anchor": true
+  },
+  "acf": {
+    "mode": "edit",
+    "renderTemplate": "block-forms.php"
+  }
+}

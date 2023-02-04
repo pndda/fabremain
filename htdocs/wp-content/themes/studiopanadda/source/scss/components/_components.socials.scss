@@ -1,0 +1,23 @@
+.c-socials {
+  h4 {
+    color: $white;
+  }
+
+  li {
+    padding: .5rem;
+  }
+
+  svg {
+    width: 19px;
+    height: 19px;
+    color: $white;
+  }
+
+  a {
+    &:hover {
+      svg {
+        color: $primary;
+      }
+    }
+  }
+}
