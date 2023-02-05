@@ -4,7 +4,7 @@
  */
 $spacer_top    = get_field( 'block_hero_spacing_top' );
 $spacer_bottom = get_field( 'block_hero_spacing_bottom' );
-$spacer        = io_spacer($spacer_top, $spacer_bottom);
+$spacer        = custom_spacer($spacer_top, $spacer_bottom);
 $anchor        = (isset($block['anchor'])) ? 'id=' . $block['anchor'] : null;
 
 // Content

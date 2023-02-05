@@ -15,7 +15,7 @@ $slides = get_field('block_slider_slides');
 ?>
 
 
-<section class="b-block b-slider <?= $spacer; ?>">
+<section class="b-block b-slider <?= $spacer; ?> mb-lg-5">
     <div class="container">
         <?php if ($slides): ?>
             <div class="row">

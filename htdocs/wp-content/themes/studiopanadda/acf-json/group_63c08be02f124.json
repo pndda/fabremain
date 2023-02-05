@@ -132,9 +132,9 @@
             },
             "choices": {
                 "black": "Black",
-                "purple": "Purple"
+                "white": "White"
             },
-            "default_value": "black",
+            "default_value": "white",
             "return_format": "value",
             "multiple": 0,
             "allow_null": 0,
@@ -161,5 +161,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1673609496
+    "modified": 1675552163
 }

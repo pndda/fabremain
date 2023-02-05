@@ -53,7 +53,9 @@ $bg = get_field('block_highlight_background');
                                 $img = $item['image'];
                                 ?>
                                 <div class="item position-relative <?= $itemClass ?> count-<?= $count ?>">
+                                    <?php if($link): ?>
                                     <a href="<?= $link['url'] ?>" class="stretched-link"></a>
+                                    <?php endif; ?>
                                     <figure>
                                         <?= wp_get_attachment_image($img['ID'], '', false, array("title" => get_the_title($img), 'class' => 'img-fluid')); ?>
                                         <div class="text">

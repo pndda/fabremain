@@ -14,27 +14,25 @@ $text = get_field('block_editor_text');
 
 // Options
 $bg = get_field('block_editor_background');
+if($bg == "white") {
+    $textcolor = 'text-dark';
+}
+else {
+    $textcolor = 'text-white';
+}
 ?>
 
-<section class="b-block b-editor bg-<?= $bg; ?><?= $spacer; ?>"<?= $anchor; ?>>
+<section class="b-block b-editor bg-<?= $bg; ?> <?= $textcolor; ?> <?= $spacer; ?>"<?= $anchor; ?>>
     <div class="container">
 
         <div class="row">
-            <div class="col-xl-10 offset-xl-1">
-
-                <div class="row">
-                    <div class="col-md-6">
-                        <?php if ($title): ?>
-                            <h2 class="h1"><?= $title; ?></h2>
-                        <?php endif; ?>
-                    </div>
-                    <div class="col-md-6">
-                        <?php if ($text): ?>
-                            <?= $text; ?>
-                        <?php endif; ?>
-                    </div>
-                </div>
-
+            <div class="col-xl-10 offset-xl-1 text-center">
+                <?php if ($title): ?>
+                    <h2 class="h1 text-primary mb-4"><?= $title; ?></h2>
+                <?php endif; ?>
+                <?php if ($text): ?>
+                    <?= $text; ?>
+                <?php endif; ?>
             </div>
         </div>
 
