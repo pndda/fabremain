@@ -25,10 +25,10 @@ $columns = get_field('block_flex_column_number');
 <section class="b-block b-flex bg-white <?= $spacer; ?>"<?= $anchor; ?>>
     <div class="container">
         <?php if ($repeater): ?>
-            <div class="row gx-5">
+            <div class="row gx-5 justify-content-center">
                 <?php foreach ($repeater as $column):
                     $col_class = match ($columns) {
-                        '3' => 'col-sm-12 col-lg-4 mb-4',
+                        '3' => 'col-sm-12 col-lg-3 mb-4',
                         '4' => 'col-sm-12 col-lg-6 col-xl-3 mb-4',
                         default => 'col-sm-12 col-lg-6 mb-4',
                     };
@@ -36,10 +36,10 @@ $columns = get_field('block_flex_column_number');
                     $text = $column['text'];
                     $link = $column['link'];
                     $button_type = $column['button_type'];
-                    $image = wp_get_attachment_image($column['image']['ID'], 'square', false, array("title" => get_the_title($column['image']['ID']), 'class' => 'img-fluid'));
+                    $image = wp_get_attachment_image($column['image']['ID'], 'square', false, array("title" => get_the_title($column['image']['ID']), 'class' => 'img-fluid w-100'));
                     ?>
                     <div class="<?= $col_class; ?>">
-                        <div class="d-flex flex-column align-items-start h-100">
+                        <div class="d-flex flex-column align-items-center h-100 bg-secondary text-center">
                             <?php if ($image): ?>
                                 <?php if ($link): ?>
                                     <a href="<?= $link['url']; ?>" target="<?= $link['target']; ?>">
@@ -60,7 +60,7 @@ $columns = get_field('block_flex_column_number');
                                 <?php endif; ?>
                             </div>
                             <?php if ($link): ?>
-                                <a href="<?= $link['url']; ?>" class="btn btn-<?= $button_type; ?>"
+                                <a href="<?= $link['url']; ?>" class="btn btn-<?= $button_type; ?> w-100"
                                    target="<?= $link['target']; ?>">
                                     <?= $link['title']; ?>
                                 </a>

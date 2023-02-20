@@ -7,6 +7,12 @@
     padding: .5rem;
   }
 
+  li:first-of-type {
+    @include media-breakpoint-up(md) {
+      padding-left: 0;
+    }
+  }
+
   svg {
     width: 19px;
     height: 19px;
