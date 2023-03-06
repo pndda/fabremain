@@ -22,7 +22,7 @@ $image_url = $image['url'];
     <div class="b-hero__content py-4 py-md-0">
         <div class="container">
             <?php if ($title): ?>
-                <h1><?= $title; ?></h1>
+                <h1 class="h2"><?= $title; ?></h1>
             <?php endif; ?>
             <?php if ($subtitle): ?>
                 <span class="h3 subtitle text-primary"><?= $subtitle; ?></span>

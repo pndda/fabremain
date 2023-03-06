@@ -25,7 +25,7 @@ $columns = get_field('block_flex_column_number');
 <section class="b-block b-flex bg-white <?= $spacer; ?>"<?= $anchor; ?>>
     <div class="container">
         <?php if ($repeater): ?>
-            <div class="row gx-5 justify-content-center">
+            <div class="row gx-4 justify-content-center">
                 <?php foreach ($repeater as $column):
                     $col_class = match ($columns) {
                         '3' => 'col-sm-12 col-lg-3 mb-4',
@@ -39,7 +39,7 @@ $columns = get_field('block_flex_column_number');
                     $image = wp_get_attachment_image($column['image']['ID'], 'square', false, array("title" => get_the_title($column['image']['ID']), 'class' => 'img-fluid w-100'));
                     ?>
                     <div class="<?= $col_class; ?>">
-                        <div class="d-flex flex-column align-items-center h-100 bg-secondary text-center">
+                        <div class="d-flex flex-column align-items-start h-100 bg-dark text-white text-center">
                             <?php if ($image): ?>
                                 <?php if ($link): ?>
                                     <a href="<?= $link['url']; ?>" target="<?= $link['target']; ?>">
@@ -50,21 +50,27 @@ $columns = get_field('block_flex_column_number');
                                 <?php endif; ?>
                             <?php endif; ?>
 
-                            <div class="d-flex flex-column flex-grow-1">
-                                <?php if ($title): ?>
-                                    <h3 class="h5 text-uppercase my-4"><?= $title; ?></h3>
-                                <?php endif; ?>
+                            <div
+                                class="d-flex flex-column flex-grow-1 justify-content-between text-start text-white w-100 px-3 py-4">
+                                <div>
+                                    <?php if ($title): ?>
+                                        <h3 class="h5 text-uppercase text-white mb-2"><?= $title; ?></h3>
+                                    <?php endif; ?>
 
-                                <?php if ($text): ?>
-                                    <?= $text; ?>
+                                    <?php if ($text): ?>
+                                        <div class="pb-3">
+                                            <?= $text; ?>
+                                        </div>
+                                    <?php endif; ?>
+                                </div>
+                                <?php if ($link): ?>
+                                    <a href="<?= $link['url']; ?>" class="btn text-white text-start w-100"
+                                       target="<?= $link['target']; ?>">
+                                        <?= $link['title']; ?>
+                                    </a>
                                 <?php endif; ?>
                             </div>
-                            <?php if ($link): ?>
-                                <a href="<?= $link['url']; ?>" class="btn btn-<?= $button_type; ?> w-100"
-                                   target="<?= $link['target']; ?>">
-                                    <?= $link['title']; ?>
-                                </a>
-                            <?php endif; ?>
+
                         </div>
                     </div>
                 <?php endforeach; ?>

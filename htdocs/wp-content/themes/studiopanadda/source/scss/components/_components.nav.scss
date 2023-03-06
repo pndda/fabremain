@@ -104,21 +104,6 @@ $triangle-size: 10px;
     }
   }
 
-
-  li:first-child {
-    a {
-      color: $primary;
-
-      &:hover {
-        color: $white;
-      }
-    }
-
-    .c-overlay__inner & {
-      display: none;
-    }
-  }
-
   a {
     font-size: 1rem;
     color: $white;
